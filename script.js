@@ -522,7 +522,7 @@ function showScore(){
     out of ${questions.length}!</p>`
     }
 
-    nextBtn.innerHTML = "Play Again";
+    nextBtn.innerHTML = "Try Again";
     nextBtn.style.display = "block"
 }
 function handleNextbtn(){
