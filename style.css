@@ -41,6 +41,13 @@ h1::after{
 
 
 }
+.logo{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-bottom: 0;
+
+}
 .quiz{
     padding: 1.5em 0;
 }

@@ -508,9 +508,20 @@ function selectAnswer(e){
 }
 function showScore(){
     resetstate();
-    const percentage = (score/questions.length)*100;
+    const percentage = Math.round((score/questions.length)*100);
     questionEL.innerHTML = `You scored ${score}
-    out of ${questions.length}! <br> Your Percentage is ${percentage}%`;
+    out of ${questions.length}! <br> You have obtained ${percentage}%`;
+    if (percentage < 50){
+        questionEL.innerHTML = `<p>You have failed, try again. You scored ${score}
+    out of ${questions.length}!</p>`
+    }else if(percentage < 70){
+        questionEL.innerHTML = `<p>You can do better! You scored ${score}
+    out of ${questions.length}!</p>`
+    } else{
+         questionEL.innerHTML = `<p>Excellent Work! You scored ${score}
+    out of ${questions.length}!</p>`
+    }
+
     nextBtn.innerHTML = "Play Again";
     nextBtn.style.display = "block"
 }
