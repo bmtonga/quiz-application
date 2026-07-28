@@ -6,6 +6,7 @@ html, body{
     margin: 0;
     padding: 0;
     background-color:var(--bgcolor) ;
+    overflow: hidden;
 }
 :root{
     --darkblue:#001e4d;
@@ -19,7 +20,7 @@ html, body{
     background-color: var(--white);
     width: 90%;
     max-width: 600px;
-    margin: 100px auto 0;
+    margin: 5% auto ;
     border-radius: 10px;
     padding: 10px;
 }
