@@ -10,21 +10,25 @@
     <title>Quiz Application</title>
 </head>
 <body>
-    <div class="app">
-        <h1>Chemistry Quiz</h1>
-        <div class="quiz">
-            <h2 id="question">
-                question
-            </h2>
-            <div id="answer-btn">
-                <div class="btn">Answer 1</div>
-                <div class="btn">Answer 2</div>
-                <div class="btn">Answer 3</div>
-                <div class="btn">Answer 4</div>
-            </div>
-            <button id="next-btn">Next</button>
+    <a href="#main-content" id="skip-link" class="skip-link">Skip to main content</a>
+
+    <main id="main-content">
+        <div class="app">
+            <h1>Chemistry Quiz</h1>
+            <section class="quiz" aria-labelledby="question" role="region">
+                <h2 id="question" tabindex="-1">
+                    question
+                </h2>
+                <div id="answer-btn" role="group" aria-labelledby="question">
+                    <!-- answer buttons injected by JavaScript -->
+                </div>
+                <button id="next-btn">Next</button>
+            </section>
+
+            <!-- Screen reader live region for dynamic announcements -->
+            <div id="announcements" class="sr-only" aria-live="polite" aria-atomic="true"></div>
         </div>
-    </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
